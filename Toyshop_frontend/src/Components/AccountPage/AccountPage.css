@@ -71,6 +71,9 @@
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
+  .userProfileSection {
+    padding-top: 10px; /* Reduce space on mobile */
+  }
   .userProfileContainer {
     padding: 20px; /* Reduce padding on smaller screens */
     max-width: 90%; /* More flexible width */
