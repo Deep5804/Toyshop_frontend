@@ -1,0 +1,96 @@
+/* AccountPage.css */
+
+/* Container for the entire profile section */
+.userProfileSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px; /* Space from top */
+  padding-bottom: 70px; /* Space from bottom */
+  min-height: 100vh; /* Ensure it takes full viewport height */
+  background-color: #f5f5f5; /* Light background for contrast */
+}
+
+/* Inner container for profile details */
+.userProfileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between elements */
+  padding: 40px; /* Inner padding */
+  border: 2px solid #e4e4e4; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center text */
+  background-color: white; /* White background for card effect */
+  max-width: 500px; /* Limit width */
+  width: 100%; /* Responsive width */
+}
+
+/* Profile image styling */
+.userProfileImage {
+  width: 150px; /* Larger image size */
+  height: 150px;
+  border-radius: 50%; /* Circular image */
+  border: 3px solid black; /* Bold black border */
+  object-fit: cover; /* Ensure image fits well */
+}
+
+/* Heading (Welcome message) */
+.userProfileContainer h2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  margin: 0; /* Remove default margin */
+}
+
+/* Paragraphs (user details) */
+.userProfileContainer p {
+  font-size: 16px;
+  color: #767676; /* Gray text for details */
+  margin: 5px 0; /* Small vertical spacing */
+}
+
+/* Logout button styling */
+.logoutButton {
+  margin-top: 20px; /* Space above button */
+  padding: 10px 20px; /* Comfortable padding */
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Slightly rounded corners */
+  cursor: pointer; /* Hand cursor on hover */
+  font-size: 16px; /* Match paragraph size */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.logoutButton:hover {
+  background-color: #e60000; /* Darker red on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .userProfileContainer {
+    padding: 20px; /* Reduce padding on smaller screens */
+    max-width: 90%; /* More flexible width */
+  }
+
+  .userProfileImage {
+    width: 120px; /* Slightly smaller image */
+    height: 120px;
+  }
+
+  .userProfileContainer h2 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .userProfileContainer p {
+    font-size: 14px; /* Adjust text size */
+  }
+
+  .logoutButton {
+    padding: 8px 16px; /* Smaller button */
+    font-size: 14px;
+  }
+}
