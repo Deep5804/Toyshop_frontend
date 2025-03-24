@@ -39,7 +39,7 @@ const Popup = () => {
         setMessage("❌ Failed to subscribe. Please try again.");
       }
     } catch (error) {
-      setMessage("❌ Something went wrong!");
+      setMessage("❌ Something went wrong!. please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -80,5 +80,4 @@ const Popup = () => {
     )
   );
 };
-
 export default Popup;
