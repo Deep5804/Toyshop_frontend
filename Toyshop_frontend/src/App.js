@@ -20,6 +20,7 @@ import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
 import Popup from "./Components/PopupBanner/Popup";
 import { Toaster } from "react-hot-toast";
 import AccountPage from "./Components/AccountPage/AccountPage";
+import AddProduct from "./Pages/AddProduct"; // ✅ Import AddProduct
 
 const App = () => {
   return (
@@ -34,7 +35,7 @@ const App = () => {
           <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/product" element={<ProductDetails />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/loginSignUp" element={<Authentication />} />
           <Route path="/resetPassword" element={<ResetPass />} />
           <Route path="/BlogDetails" element={<BlogDetails />} />
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/cart" element={<ShoppingCart />} />
           <Route path="/account" element={<AccountPage />} /> {/* Updated route */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/add-product" element={<AddProduct />} /> {/* ✅ New Route */}
         </Routes>
         <Footer />
         <Toaster />
