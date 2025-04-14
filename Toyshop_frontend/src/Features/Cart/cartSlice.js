@@ -88,9 +88,13 @@ const cartSlice = createSlice({
       const existingItem = state.items.find((item) => item.productID === productID);
     
       if (existingItem) {
-        if (existingItem.quantity < MAX_QUANTITY) {
-          existingItem.quantity += 1;
-          state.totalAmount += existingItem.productPrice;
+        if (existingItem.quantity + product.quantity <= MAX_QUANTITY) {
+          existingItem.quantity += product.quantity; // Add the passed quantity
+          state.totalAmount += existingItem.productPrice * product.quantity;
+        } else {
+          const remainingCapacity = MAX_QUANTITY - existingItem.quantity;
+          existingItem.quantity = MAX_QUANTITY;
+          state.totalAmount += existingItem.productPrice * remainingCapacity;
         }
       } else {
         const newItem = {
@@ -99,11 +103,11 @@ const cartSlice = createSlice({
           productPrice: product.productPrice || product.price,
           frontImg: product.frontImg || (product.imageUrls?.[0] ?? "fallback-image.jpg"),
           productReviews: product.productReviews || "No Reviews",
-          quantity: 1,
+          quantity: Math.min(product.quantity, MAX_QUANTITY), // Use the passed quantity, capped at MAX_QUANTITY
         };
     
         state.items.push(newItem);
-        state.totalAmount += newItem.productPrice;
+        state.totalAmount += newItem.productPrice * newItem.quantity;
       }
     }
     ,    
