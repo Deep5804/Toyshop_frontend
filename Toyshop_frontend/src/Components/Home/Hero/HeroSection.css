@@ -105,7 +105,7 @@
   border: 1px solid white;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .heroMain {
     padding: 30px 60px;
   }
@@ -123,7 +123,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .heroMain {
     padding: 45px 15px;
     flex-direction: column;

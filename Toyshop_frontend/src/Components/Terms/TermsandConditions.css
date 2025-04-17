@@ -27,13 +27,13 @@
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (width <= 1210px) {
   .termsContainer {
     padding: 30px 60px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .termsContainer {
     padding: 15px;
   }

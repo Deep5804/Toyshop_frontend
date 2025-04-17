@@ -57,7 +57,7 @@
   color: black;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .resetPasswordContainer {
     width: 90%;
   }

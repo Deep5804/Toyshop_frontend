@@ -6,9 +6,9 @@
 }
 
 .blogListHeader {
-  background-image: url(../../../Assets/pattern_bg.png);
+  background-image: url("../../../Assets/pattern_bg.png");
   background-size: cover;
-  background-color: #eeeeee;
+  background-color: #eee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,7 +136,7 @@
 
 /* responsive */
 
-@media screen and (max-width: 1210px) {
+@media screen and (width <= 1210px) {
   .blogPostListContainer {
     padding: 0 60px;
     grid-template-columns: repeat(2, 1fr);
@@ -147,7 +147,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .blogListHeaderContainer {
     margin-bottom: 20px;
   }

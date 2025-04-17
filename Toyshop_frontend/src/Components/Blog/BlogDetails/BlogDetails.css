@@ -1,7 +1,7 @@
 .blogDetailsSectionContainer {
   display: flex;
   flex-direction: column;
-  padding: 0px 160px;
+  padding: 0 160px;
   margin-top: 30px;
 }
 
@@ -214,7 +214,7 @@
   width: 50%;
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (width <= 1210px) {
   .blogDetailsSectionContainer {
     padding: 0 60px;
     margin-top: 0;
@@ -225,7 +225,7 @@
   }
 
   .blogDetailsContent {
-    padding: 50px 50px;
+    padding: 50px;
   }
 
   .share-buttons {
@@ -233,11 +233,11 @@
   }
 
   .blogDetailsNextPrev {
-    padding: 50px 50px;
+    padding: 50px;
   }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (width <= 991px) {
   .blogDetailsHeading {
     padding: 0 25px;
   }
@@ -259,7 +259,7 @@
   }
 
   .share-button {
-    padding: 10px 10px;
+    padding: 10px;
   }
 
   .share-button svg {
@@ -280,13 +280,13 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .blogDetailsHeading {
     padding: 0;
   }
 
   .blogDetailsContent {
-    padding: 50px 0px;
+    padding: 50px 0;
   }
 
   .blogDetailsContentBullets {
@@ -307,9 +307,9 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .blogDetailsSectionContainer {
-    padding: 0px 15px;
+    padding: 0 15px;
   }
 
   .blogDetailsHeading h2 {
@@ -326,7 +326,7 @@
   }
 
   .share-button {
-    padding: 15px 15px;
+    padding: 15px;
   }
 
   .blogDetailsNextPrev {

@@ -38,13 +38,13 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (width <= 1210px) {
   .errorContainer a {
     padding: 20px 100px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .errorContainer {
     padding: 0 20px;
     height: 550px;
@@ -55,10 +55,11 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (width <= 320px) {
   .errorContainer {
     height: 500px;
   }
+
   .errorContainer h1 {
     font-size: 70px;
   }

@@ -91,7 +91,9 @@
 }
 
 /* -------------------------------- */
+
 /* -----------Tab 1--------------- */
+
 /* -------------------------------- */
 
 .shoppingBagSection {
@@ -116,7 +118,6 @@
   text-align: left;
   font-size: 14px;
   font-weight: 500;
-  padding: 10px 0;
   border-bottom: 1px solid #e4e4e4;
   text-transform: uppercase;
   padding: 20px 10px;
@@ -217,7 +218,7 @@
   width: 30%;
   height: 30%;
   padding: 40px;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -327,7 +328,9 @@
 }
 
 /* -------------------------------- */
+
 /* -----------Tab 2--------------- */
+
 /* -------------------------------- */
 
 .checkoutSection {
@@ -354,21 +357,20 @@
 
 .checkoutDetailsForm input {
   height: 52px;
-  padding: 0px 20px;
+  padding: 0 20px;
   border: 2px solid #e4e4e4;
   outline-color: black;
 }
 
 .checkoutDetailsForm select {
   height: 52px;
-  padding: 0px 20px;
+  padding: 0 20px;
   border: 2px solid #e4e4e4;
   outline: none;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  appearance: none;
+  appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 20 20"><path fill="%23000000" stroke-width="0" d="M14.17 6.17l-4.17 4.17-4.17-4.17-1.83 1.83 6 6 6-6z"/></svg>');
-  background-repeat: no-repeat;
   background-repeat: no-repeat;
   background-position: right 8px top 50%;
   background-size: 20px 20px;
@@ -420,7 +422,7 @@
 }
 
 .checkoutDetailsFormCheck input:checked {
-  border: 2px solid #000000;
+  border: 2px solid #000;
 }
 
 .checkoutDetailsFormCheck input::after {
@@ -450,7 +452,7 @@
 }
 
 .checkoutTotalContainer {
-  border: 1px solid #000000;
+  border: 1px solid #000;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -538,7 +540,7 @@
 }
 
 .checkoutPaymentContainer input:checked {
-  border: 2px solid #000000;
+  border: 2px solid #000;
 }
 
 .checkoutPaymentContainer input::after {
@@ -595,7 +597,9 @@
 }
 
 /* -------------------------------- */
+
 /* -----------Tab 3--------------- */
+
 /* -------------------------------- */
 
 .orderCompleteSection {
@@ -603,6 +607,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .orderComplete {
   display: flex;
   flex-direction: column;
@@ -669,7 +674,7 @@
 /* order total */
 
 .orderTotalContainer {
-  border: 1px solid #000000;
+  border: 1px solid #000;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -741,7 +746,7 @@
 
 /* Responsive */
 
-@media screen and (max-width: 1210px) {
+@media screen and (width <= 1210px) {
   .shoppingCartSection {
     padding: 30px 60px;
   }
@@ -757,7 +762,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width <= 768px) {
   .shoppingCartSection h2 {
     font-size: 30px;
   }
@@ -807,7 +812,9 @@
   }
 
   /* -------------------------------- */
+
   /* -----------Tab 1--------------- */
+
   /* -------------------------------- */
 
   .shopCartFooter {
@@ -815,7 +822,9 @@
   }
 
   /* -------------------------------- */
+
   /* -----------Tab 2--------------- */
+
   /* -------------------------------- */
 
   .checkoutSection {
@@ -828,7 +837,9 @@
   }
 
   /* -------------------------------- */
+
   /* -----------Tab 3--------------- */
+
   /* -------------------------------- */
 
   .orderComplete {
@@ -843,11 +854,11 @@
   }
 
   .orderInfoItem {
-    padding: 0px 40px;
+    padding: 0 40px;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .shoppingCartSection {
     padding: 30px 15px;
   }
@@ -977,7 +988,9 @@
   }
 
   /* -------------------------------- */
+
   /* -----------Tab 2--------------- */
+
   /* -------------------------------- */
 
   .checkoutDetailsFormRow {
@@ -1003,17 +1016,21 @@
   }
 
   /* -------------------------------- */
+
   /* -----------Tab 3--------------- */
+
   /* -------------------------------- */
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (width <= 320px) {
   .shoppingBagTableMobileItemsDetailMain h4 {
     font-size: 14px;
   }
+
   .shopCartFooterContainer form {
-    gap: 0px;
+    gap: 0;
   }
+
   .shopCartFooterContainer form button {
     padding: 0 5px;
   }

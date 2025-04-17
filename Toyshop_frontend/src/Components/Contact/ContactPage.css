@@ -79,7 +79,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 1210px) {
+@media screen and (width <= 1210px) {
   .contactSection h2 {
     padding: 30px 60px;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (width <= 450px) {
   .contactSection h2 {
     padding: 30px 15px;
   }
