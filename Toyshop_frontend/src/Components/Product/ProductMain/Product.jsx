@@ -1,3 +1,4 @@
+
 // import React, { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
 // import { useDispatch, useSelector } from "react-redux";
@@ -8,7 +9,6 @@
 // import { FiHeart } from "react-icons/fi";
 // import { PiShareNetworkLight } from "react-icons/pi";
 // import toast from "react-hot-toast";
-// import RelatedProducts from "../../../Components/Product/RelatedProducts/RelatedProducts";
 // import "./Product.css";
 
 // const Product = () => {
@@ -100,7 +100,7 @@
 
 //         <div className="productDetails">
 //           <div className="productBreadcrumb">
-//             <Link to="/">Home</Link> &nbsp;/&nbsp;
+//             <Link to="/">Home</Link>  / 
 //             <Link to="/shop">Shop</Link>
 //           </div>
 
@@ -155,17 +155,15 @@
 //           </div>
 //         </div>
 //       </div>
-
-//       <RelatedProducts categoryID={categoryData?.[0]?.categoryID || product.categoryID} />
+//       {/* Removed <RelatedProducts /> from here */}
 //     </div>
 //   );
 // };
 
 // export default Product;
 
-
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../../Features/Cart/cartSlice";
 import { Link } from "react-router-dom";
@@ -179,6 +177,7 @@ import "./Product.css";
 const Product = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const cartItems = useSelector((state) => state.cart.items);
 
   const [product, setProduct] = useState(null);
@@ -232,12 +231,38 @@ const Product = () => {
   const decrement = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
   const handleAddToCart = () => {
-    const productInCart = cartItems.find((item) => item._id === product._id);
+    // Check if user is logged in by verifying token in localStorage
+    const token = localStorage.getItem("token");
+    if (!token) {
+      toast.error("Please log in to add items to your cart", {
+        duration: 2000,
+        style: { backgroundColor: "#07bc0c", color: "white" },
+      });
+      navigate("/loginSignUp");
+      return;
+    }
+
+    const productInCart = cartItems.find((item) => item.productID === product._id);
     if (productInCart && productInCart.quantity + quantity > 20) {
-      toast.error("Product limit reached", { duration: 2000, style: { backgroundColor: "#ff4b4b", color: "white" } });
+      toast.error("Product limit reached", {
+        duration: 2000,
+        style: { backgroundColor: "#ff4b4b", color: "white" },
+      });
     } else {
-      dispatch(addToCart({ ...product, quantity }));
-      toast.success("Added to cart!", { duration: 2000, style: { backgroundColor: "#07bc0c", color: "white" } });
+      dispatch(
+        addToCart({
+          productID: product._id,
+          frontImg: product.imageUrls[0],
+          productName: product.name,
+          productPrice: product.price,
+          quantity,
+          productReviews: product.productReviews || "No Reviews",
+        })
+      );
+      toast.success("Added to cart!", {
+        duration: 2000,
+        style: { backgroundColor: "#07bc0c", color: "white" },
+      });
     }
   };
 
@@ -320,7 +345,6 @@ const Product = () => {
           </div>
         </div>
       </div>
-      {/* Removed <RelatedProducts /> from here */}
     </div>
   );
 };

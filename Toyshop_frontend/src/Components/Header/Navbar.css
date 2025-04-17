@@ -245,3 +245,30 @@
 .mobile-menuSocial_links svg {
   cursor: pointer;
 }
+
+/* Desktop Search Bar */
+.iconContainer .search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.iconContainer .search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.iconContainer .search-bar input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Ensure search results are positioned correctly */
+.search-results {
+  width: 100%;
+  max-width: 300px;
+}
