@@ -55,7 +55,7 @@ const ProductDetails = () => {
   return (
     <>
       <Product />
-      <AdditionalInfo />
+      
       <RelatedProducts categoryIDs={categoryIDs} productID={id} />
     </>
   );

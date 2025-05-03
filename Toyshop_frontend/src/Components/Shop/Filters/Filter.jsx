@@ -1215,50 +1215,6 @@ const Filter = ({ onFilterChange }) => {
           </Accordion>
         </div>
 
-        <div className="filterBrands">
-          <Accordion defaultExpanded disableGutters elevation={0}>
-            <AccordionSummary
-              expandIcon={<IoIosArrowDown size={20} />}
-              aria-controls="panel4-content"
-              id="panel4-header"
-              sx={{ padding: 0, marginBottom: 2 }}
-            >
-              <h5 className="filterHeading">Brands</h5>
-            </AccordionSummary>
-            <AccordionDetails sx={{ padding: 0 }}>
-              <div className="searchBar">
-                <BiSearch className="searchIcon" size={20} color={"#767676"} />
-                <input
-                  type="text"
-                  placeholder="Search"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                />
-              </div>
-              <div className="brandList">
-                {filteredBrands.length > 0 ? (
-                  filteredBrands.map((brand, index) => (
-                    <div className="brandItem" key={index}>
-                      <input
-                        type="checkbox"
-                        name="brand"
-                        id={`brand-${index}`}
-                        className="brandRadio"
-                      />
-                      <label htmlFor={`brand-${index}`} className="brandLabel">
-                        {brand.name}
-                      </label>
-                      <span className="brandCount">{brand.count}</span>
-                    </div>
-                  ))
-                ) : (
-                  <div className="notFoundMessage">Not found</div>
-                )}
-              </div>
-            </AccordionDetails>
-          </Accordion>
-        </div>
-
         <div className="filterPrice">
           <Accordion defaultExpanded disableGutters elevation={0}>
             <AccordionSummary
